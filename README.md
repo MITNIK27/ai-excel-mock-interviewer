@@ -18,8 +18,8 @@ Includes a **candidate-facing app** and an **admin portal**.
 ---
 
 ## 🌐 Live Deployment Links
-- **Candidate App:** [Open Candidate Interviewer]([https://ai-excel-mock-interviewer.streamlit.app/](https://ai-excel-mock-interviewer-candidate.streamlit.app/))
-- **Admin Portal:** [Open Admin Dashboard]([https://ai-excel-mock-interview-handler.streamlit.app/](https://ai-excel-mock-interview-handler.streamlit.app/))
+- **Candidate App:** [Open Candidate Interviewer](https://ai-excel-mock-interviewer-candidate.streamlit.app/)
+- **Admin Portal:** [Open Admin Dashboard](https://ai-excel-mock-interview-handler.streamlit.app/)
 
 > Note: As a Proof-of-Concept, both apps are currently accessible directly without authentication. For production-ready usage, a secure login/authentication layer will be integrated to ensure controlled access.
 
