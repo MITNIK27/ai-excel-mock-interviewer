@@ -3,13 +3,20 @@ import requests
 import os
 from dotenv import load_dotenv
 from utils import excel_handler as eh 
+import streamlit as st
 
 # Load environment variables
 load_dotenv()
 
 app = Flask(__name__)
 
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY") or st.secrets["GEMINI_API_KEY"]
+try:
+    import streamlit as st
+    GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
+except (ImportError, KeyError):
+    GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+
+# GEMINI_API_KEY = os.getenv("GEMINI_API_KEY") or st.secrets["GEMINI_API_KEY"]
 GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-001:generateContent"
 
 # In-memory session storage

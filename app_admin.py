@@ -4,6 +4,7 @@ import json
 import pandas as pd
 import math
 
+
 st.set_page_config(page_title="Admin Dashboard - AI Interviewer", layout="wide")
 st.title("🛠️ Admin Dashboard - AI Excel Mock Interviewer")
 
@@ -34,7 +35,7 @@ candidates_df = eh._load_candidates()
 filter_status = st.radio("Filter candidates by status", ["All", "Completed", "Pending"])
 if filter_status != "All":
     candidates_df = candidates_df[candidates_df["status"] == filter_status.lower()]
-    
+
 if candidates_df.empty:
     st.warning("⚠️ No candidates found.")
 else:
@@ -101,11 +102,11 @@ else:
                 mime="application/json"
             )
 
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
-if summary.get("average_score") is not None:
-    st.subheader("📊 Score Distribution")
-    scores = [t["score"] for t in transcript if t["score"] is not None]
-    fig, ax = plt.subplots()
-    ax.hist(scores, bins=5, edgecolor="black")
-    st.pyplot(fig)
+# if summary.get("average_score") is not None:
+#     st.subheader("📊 Score Distribution")
+#     scores = [t["score"] for t in transcript if t["score"] is not None]
+#     fig, ax = plt.subplots()
+#     ax.hist(scores, bins=5, edgecolor="black")
+#     st.pyplot(fig)
